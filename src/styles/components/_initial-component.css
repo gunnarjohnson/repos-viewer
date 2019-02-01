@@ -1,18 +1,12 @@
-// React Component
+// Initial Component
 
-.react-component {
+.initial-component {
+  padding: 2em;
   text-align: center;
 
-  &__icon {
-    color: $blueLight;
-    font-size: 7em;
-    @media screen and (width >= $device-md) {
-      font-size: 9em;
-    }
-  }
-
   &__title {
-    color: $blueLight;
+    margin-top: 0;
+    color: $black;
     font-family: $fontTitle;
     letter-spacing: 3px;
     @media screen and (width >= $device-md) {
@@ -21,7 +15,7 @@
   }
 
   &__content {
-    color: $white;
+    color: $black;
     font-family: $fontContent;
     font-size: 1.25em;
     text-transform: uppercase;
