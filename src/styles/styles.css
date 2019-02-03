@@ -9,6 +9,9 @@
 @import 'base/_fonts';
 
 // Components
-@import 'components/_app';
-@import 'components/_initial-component';
-@import 'components/_copyright';
+@import 'components/_cards';
+@import 'components/_footer';
+@import 'components/_header';
+@import 'components/_languages';
+@import 'components/_pinned-repos-viewer';
+@import 'components/_repos';

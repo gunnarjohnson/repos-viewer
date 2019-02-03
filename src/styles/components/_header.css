@@ -1,0 +1,17 @@
+// Header component
+
+.header {
+  color: $white;
+  background-color: $medium;
+  padding: 1em 2.5em;
+
+  &__title {
+    margin: 0;
+    font-family: $fontTitle;
+    font-size: 2em;
+    letter-spacing: 3px;
+    @media screen and (width >= $device-md) {
+      font-size: 2.5em;
+    }
+  }
+}

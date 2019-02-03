@@ -1,0 +1,25 @@
+// Footer Component
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $dark;
+  text-align: center;
+
+  &__copyright {
+  color: $white;
+  font-family: $fontContent;
+
+    &-link {
+      color: $white;
+      text-decoration: none;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: $medium;
+      }
+    }
+  }
+}

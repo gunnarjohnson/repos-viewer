@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Copyright extends React.Component {
+class Footer extends React.Component {
   state = {
     copyrightYear: 2019,
     currentYear: undefined
@@ -15,16 +15,16 @@ class Copyright extends React.Component {
 
   render() {
     return (
-      <footer>
-        <p className="copyright">
+      <footer className="footer">
+        <p className="footer__copyright">
           {'© ' + this.state.copyrightYear}
           {this.state.currentYear && '-' + this.state.currentYear}
           {' '} 
-          <a className="copyright__link" href="https://github.com/gunnarjohnson" target="_blank">Gunnar Johnson</a>
+          <a className="footer__copyright-link" href="https://github.com/gunnarjohnson" target="_blank">Gunnar Johnson</a>
         </p>
       </footer>
     );
   }
 }
 
-export default Copyright;
+export default Footer;

@@ -1,0 +1,42 @@
+// Cards Component
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+
+  &-repo {
+    width: calc(25% - 1em);
+    margin: 0.5em;
+    background-color: $medLight;
+    border-radius: 6px;
+
+    &__name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3.5em;
+      margin: 0;
+      padding: 0.5em;
+      color: $black;
+      font-family: $fontTitle;
+      font-size: 1.5em;
+      letter-spacing: 3px;
+      border-bottom: 1px solid $light;
+      box-sizing: border-box;
+      @media screen and (width >= $device-md) {
+        font-size: 2em;
+      }
+    }
+
+    &__description {
+      min-height: 4em;
+      color: $black;
+      font-family: $fontContent;
+      font-size: 1em;
+      @media screen and (width >= $device-md) {
+        font-size: 1.25em;
+      }
+    }
+  }
+}
