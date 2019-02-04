@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const withGitHubData = (url) => (WrappedComponent) => {
+const withGitHubData = (WrappedComponent) => {
   class WithGitHubData extends Component {
     state = {
       github: [],
@@ -8,15 +8,20 @@ const withGitHubData = (url) => (WrappedComponent) => {
       error: false
     };
 
-    fetchData = () => {
-      this.setState({ isLoading: true });
-      let urlGitHub = url;
+    fetchData = (query, endpoint) => {
+      this.setState({ 
+        github: [], 
+        isLoading: true,
+        error: false
+      });
 
-      if (!!this.props.languagesURL) {
-        urlGitHub = this.props.languagesURL;
+      let url = query;
+
+      if (endpoint === 'repos') {
+        url = 'https://api.github.com/users/' + query + '/repos';
       }
-
-      fetch(urlGitHub)
+      
+      fetch(url)
         .then(response => {
           if (response.ok) {
             return response.json();
@@ -29,11 +34,19 @@ const withGitHubData = (url) => (WrappedComponent) => {
     };
 
     componentDidMount() {
-      this.fetchData();
+      this.fetchData(this.props.query, this.props.endpoint);
+    }
+
+    componentDidUpdate(prevProps) {
+      if (this.props.query !== prevProps.query) {
+        this.fetchData(this.props.query, this.props.endpoint);
+      }
     }
 
     render() {
-      return (<WrappedComponent {...this.state} languagesURL={this.props.languagesURL} />);
+      return (
+        <WrappedComponent {...this.state} />
+      );
     }
   }
 

@@ -1,0 +1,37 @@
+// Search Component
+
+.search {
+  padding: 1em 1em 0;
+  @media screen and (width >= $device-md) {
+    padding: 2em 2em 0;
+  }
+  @media screen and (width >= 1400px) {
+    padding: 2em 2.5em 0;
+  }
+
+  &__form {
+    display: flex;
+    font-family: $fontContent;
+  }
+
+  &__input {
+    width: calc(100% - 6.5em);
+    padding: 0 0.5em;
+    @media screen and (width >= 1400px) {
+      width: calc(50% - 8em);
+    }
+  }
+
+  &__button {
+    width: 6.5em;
+    padding: 0.5em 0.75em;
+    color: $white;
+    background-color: $medium;
+    border: none;
+    transition: background-color 0.1s ease-in-out;
+    &:hover {
+      background-color: $medDark;
+      cursor: pointer;
+    }
+  }
+}

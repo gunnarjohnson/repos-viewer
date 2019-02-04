@@ -6,35 +6,45 @@
   text-align: center;
 
   &-repo {
-    width: calc(25% - 1em);
-    margin: 0.5em;
-    background-color: $medLight;
+    width: 100%;
+    margin: 1em auto;
+    padding: 0.5em;
     border-radius: 6px;
+    background-color: $medLight;
+    box-shadow: 0 0 8px $shadow;
+    @media screen and (width >= $device-md) {
+      width: calc(50% - 3em);
+      margin: 1em;
+    }
+    @media screen and (width >= 1400px) {
+      width: calc(25% - 2em);
+      margin: 0.5em;
+    }
 
     &__name {
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 3.5em;
-      margin: 0;
-      padding: 0.5em;
+      padding-bottom: 1em;
+      border-bottom: 1px solid $black;
       color: $black;
       font-family: $fontTitle;
       font-size: 1.5em;
       letter-spacing: 3px;
-      border-bottom: 1px solid $light;
       box-sizing: border-box;
       @media screen and (width >= $device-md) {
+        min-height: 3.5em;
         font-size: 2em;
       }
     }
 
     &__description {
-      min-height: 4em;
+      padding: 0.5em 0;
       color: $black;
       font-family: $fontContent;
       font-size: 1em;
       @media screen and (width >= $device-md) {
+        min-height: 6em;
         font-size: 1.25em;
       }
     }
