@@ -12,7 +12,9 @@
 @import 'components/_cards';
 @import 'components/_footer';
 @import 'components/_header';
+@import 'components/_items';
 @import 'components/_languages';
 @import 'components/_pinned-repos-viewer';
 @import 'components/_repos';
+@import 'components/_repo-contents';
 @import 'components/_search';

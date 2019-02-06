@@ -1,18 +1,8 @@
 // Repos Component
 
 .repos {
-  padding: 1em;
+  padding: 0.5em 1em 2em;
   @media screen and (width >= 1400px) {
-    padding: 2em;
-  }
-
-  &__content {
-    color: $black;
-    font-family: $fontContent;
-    font-size: 1.25em;
-    text-transform: uppercase;
-    @media screen and (width >= $device-md) {
-      font-size: 1.75em;
-    }
+    padding: 0.5em 2em 3em;
   }
 }

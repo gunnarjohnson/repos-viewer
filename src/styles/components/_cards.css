@@ -1,17 +1,20 @@
-// Cards Component
+// Cards Section
 
 .cards {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
 
+  // Card Component
+
   &-repo {
     width: 100%;
     margin: 1em auto;
     padding: 0.5em;
     border-radius: 6px;
-    background-color: $medLight;
+    background-color: $white;
     box-shadow: 0 0 8px $shadow;
+    cursor: pointer;
     @media screen and (width >= $device-md) {
       width: calc(50% - 3em);
       margin: 1em;
@@ -42,10 +45,10 @@
       padding: 0.5em 0;
       color: $black;
       font-family: $fontContent;
-      font-size: 1em;
+      font-size: 1.25em;
       @media screen and (width >= $device-md) {
         min-height: 6em;
-        font-size: 1.25em;
+        font-size: 1.5em;
       }
     }
   }

@@ -15,7 +15,7 @@
     color: $white;
     background-color: $black;
     font-family: $fontContent;
-    font-size: 1em;  
+    font-size: 1.25em;  
     box-shadow: 0 0 4px $shadow;
     &--c {
       background-color: #555555;

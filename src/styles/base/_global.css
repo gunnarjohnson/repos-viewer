@@ -7,3 +7,13 @@ html {
 body {
   min-height: 100%;
 }
+
+.content {
+  color: $black;
+  font-family: $fontContent;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  @media screen and (width >= $device-md) {
+    font-size: 1.75em;
+  }
+}

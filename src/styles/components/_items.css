@@ -1,0 +1,87 @@
+// Items Component
+
+.items {
+  padding: 2em;
+  border-radius: 6px;
+  background-color: $white;
+  box-shadow: 0 0 8px $shadow;
+  @media screen and (width >= $device-md) {
+    min-width: 66.66%;
+    margin: 0 auto;
+  }
+  @media screen and (width >= $device-xl) {
+    min-width: 50%;
+  }
+
+  &__title {
+    margin-top: 0;
+    color: $black;
+    font-family: $fontTitle;
+    font-size: 1.5em;
+    @media screen and (width >= $device-lg) {
+      font-size: 2em;
+    }
+  }
+
+  &__button {
+    bottom: 0;
+    padding: 0.5em 0.75em;
+    border: none;
+    border-radius: 4px;
+    color: $white;
+    background-color: $medDark;
+    font-family: $fontContent;
+    font-size: 1.25em;
+    transition: background-color 0.1s ease-in-out;
+    @media screen and (width >= $device-lg) {
+      font-size: 1.5em;
+    }
+    &:hover {
+      background-color: $bright;
+      cursor: pointer;
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    font-family: $fontContent;
+    font-size: 1.25em;
+    list-style: none;
+    @media screen and (width >= $device-lg) {
+      font-size: 1.5em;
+    }
+
+    &__item {
+      margin: 0.15em;
+      &--dir {
+        order: -1;
+      }
+    }
+
+    &__link {
+      text-decoration: none;
+      &--dir {
+        color: $dark;
+        &:visited {
+          color: $dark;
+        }
+        &:active, &:focus, &:hover {
+          color: $black;
+          text-decoration: underline;
+        }
+      }
+      &--file {
+        color: $medDark;
+        &:visited {
+          color: $medDark;
+        }
+        &:active, &:focus, &:hover {
+          color: $black;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

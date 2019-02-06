@@ -15,13 +15,21 @@ const withGitHubData = (WrappedComponent) => {
         error: false
       });
 
-      let url = query;
+      let url;
 
       if (endpoint === 'repos') {
-        url = 'https://api.github.com/users/' + query + '/repos';
+        url = 'https://api.github.com/users/' + query + '/' + endpoint;
+      } else if (endpoint === 'languages') {
+        url = query;
+      } else {
+        url = query + '/' + endpoint;
       }
+
+      const headers = new Headers({
+        'Authorization': 'Basic gunnarjohnson'
+      });
       
-      fetch(url)
+      fetch(url, headers)
         .then(response => {
           if (response.ok) {
             return response.json();
@@ -45,7 +53,7 @@ const withGitHubData = (WrappedComponent) => {
 
     render() {
       return (
-        <WrappedComponent {...this.state} />
+        <WrappedComponent {...this.state} repoName={this.props.repoName} resetView={this.props.resetView} />
       );
     }
   }

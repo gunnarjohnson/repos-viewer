@@ -1,5 +1,5 @@
 import React from 'react';
-import withGitHubData from './withGitHubData';
+import withGitHubData from '../../withGitHubData';
 
 const Languages = (props) => {
   const languages = Object.keys(props.github);
