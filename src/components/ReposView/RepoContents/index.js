@@ -3,7 +3,7 @@ import withGitHubData from '../../withGitHubData';
 import Items from './Items';
 
 const RepoContents = (props) => {
-  const { github, isLoading, error, repoName, resetView } = props;
+  const { github, isLoading, error, repoName, htmlURL, resetView } = props;
 
   return (
     <div className="repo-contents">
@@ -11,13 +11,13 @@ const RepoContents = (props) => {
         <p className="repo-contents__content content">Loading...</p>
       )}
       {!!error && (
-        <p className="repo-contents__content content">Something went wrong.</p>
+        <React.Fragment>
+          <p className="repo-contents__content content">Something went wrong.</p>
+          <button className="repo-contents__button" onClick={resetView}>Back to Search Results</button>
+        </React.Fragment>
       )}
       {!!github[0] && (
-        <Items contents={github} repo={repoName} reset={resetView}/>
-      )}
-      {!error && !isLoading && !github[0] && (
-        <p className="repo-contents__content content">This repository is empty.</p>
+        <Items contents={github} repo={repoName} url={htmlURL} reset={resetView} />
       )}
     </div>
   );

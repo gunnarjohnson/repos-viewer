@@ -9,11 +9,7 @@ const withGitHubData = (WrappedComponent) => {
     };
 
     fetchData = (query, endpoint) => {
-      this.setState({ 
-        github: [], 
-        isLoading: true,
-        error: false
-      });
+      this.setState({ github: [], isLoading: true, error: false });
 
       let url;
 
@@ -24,12 +20,8 @@ const withGitHubData = (WrappedComponent) => {
       } else {
         url = query + '/' + endpoint;
       }
-
-      const headers = new Headers({
-        'Authorization': 'Basic gunnarjohnson'
-      });
       
-      fetch(url, headers)
+      fetch(url)
         .then(response => {
           if (response.ok) {
             return response.json();
@@ -53,7 +45,12 @@ const withGitHubData = (WrappedComponent) => {
 
     render() {
       return (
-        <WrappedComponent {...this.state} repoName={this.props.repoName} resetView={this.props.resetView} />
+        <WrappedComponent 
+          {...this.state} 
+          repoName={this.props.repoName} 
+          htmlURL={this.props.htmlURL} 
+          resetView={this.props.resetView} 
+        />
       );
     }
   }

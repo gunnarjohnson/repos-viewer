@@ -4,11 +4,13 @@ import { faFile } from '@fortawesome/free-regular-svg-icons';
 import { faFolder } from '@fortawesome/free-regular-svg-icons';
 
 const Items = (props) => {
-  const { contents, repo } = props;
+  const { contents, repo, url } = props;
 
   return (
     <div className="items">
-      <h2 className="items__title">{repo}</h2>
+      <h2 className="items__title">
+        <a className="items__title-link" href={url} target="_blank">{repo}</a>
+      </h2>
       <ul className="items-list">
         {contents.map((item, i) => (
           <li className={"items-list__item items-list__item--" + item.type} key={i}>
