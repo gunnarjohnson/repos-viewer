@@ -1,7 +1,7 @@
 {
-  "name": "pinned-repos-viewer",
+  "name": "repos-viewer",
   "version": "1.0.0",
-  "description": "A React app that consumes the GitHub REST API and displays a user's pinned repositories.",
+  "description": "A React app that uses the GitHub REST API to display a user's repositories.",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gunnarjohnson/pinned-repos-viewer.git"
+    "url": "git+https://github.com/gunnarjohnson/repos-viewer.git"
   },
   "author": "Gunnar Johnson",
   "license": "SEE LICENSE IN LICENSE.txt",
   "bugs": {
-    "url": "https://github.com/gunnarjohnson/pinned-repos-viewer/issues"
+    "url": "https://github.com/gunnarjohnson/repos-viewer/issues"
   },
-  "homepage": "https://github.com/gunnarjohnson/pinned-repos-viewer#readme",
+  "homepage": "https://github.com/gunnarjohnson/repos-viewer#readme",
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
@@ -27,6 +27,10 @@
     "@babel/plugin-proposal-class-properties": "^7.2.3",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.14",
+    "@fortawesome/free-brands-svg-icons": "^5.7.1",
+    "@fortawesome/free-regular-svg-icons": "^5.7.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^1.0.0",
     "css-loader": "^2.1.0",

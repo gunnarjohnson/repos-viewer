@@ -1,6 +1,9 @@
 // Header component
 
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: $white;
   background-color: $medium;
   padding: 1em;
@@ -13,10 +16,15 @@
     font-family: $fontTitle;
     font-size: 2em;
     letter-spacing: 3px;
-    text-align: center;
     @media screen and (width >= $device-lg) {
       font-size: 2.5em;
-      text-align: left;
+    }
+  }
+
+  &__icon {
+    font-size: 2em;
+    @media screen and (width >= $device-lg) {
+      font-size: 2.5em;
     }
   }
 }

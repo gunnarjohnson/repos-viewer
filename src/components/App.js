@@ -4,7 +4,7 @@ import Header from './Header';
 import Search from './Search';
 
 const App = () => (
-  <div className="pinned-repos-viewer">
+  <div className="repos-viewer">
     <Header />
     <Search />
     <Footer />

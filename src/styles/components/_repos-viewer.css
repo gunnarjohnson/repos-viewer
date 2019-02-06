@@ -1,6 +1,6 @@
-// Pinned Repos Viewer Component
+// Repos Viewer Component
 
-.pinned-repos-viewer {
+.repos-viewer {
   position: relative;
   min-height: calc(100vh - 50px);
   padding-bottom: 50px;

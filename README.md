@@ -1,5 +1,5 @@
-# Pinned Repos Viewer
-**A React app that uses the GitHub REST API to display a user's pinned repositories**
+# Repos Viewer
+**A React app that uses the GitHub REST API to display a user's repositories**
 
 ## Table of Contents
 * [Installation](#installation)
@@ -13,9 +13,9 @@
 
 ### Get App
 Choose from the following options:
-* **Clone:** `git clone https://github.com/gunnarjohnson/pinned-repos-viewer.git`
-* [**Download**](https://github.com/gunnarjohnson/pinned-repos-viewer/archive/master.zip)
-* [**Fork**](https://github.com/gunnarjohnson/pinned-repos-viewer/fork)
+* **Clone:** `git clone https://github.com/gunnarjohnson/repos-viewer.git`
+* [**Download**](https://github.com/gunnarjohnson/repos-viewer/archive/master.zip)
+* [**Fork**](https://github.com/gunnarjohnson/repos-viewer/fork)
 
 ### Install Dependencies
 ```
@@ -49,9 +49,9 @@ Builds the app in Webpack's production mode to the `dist` directory.
 
 ### Assignment
 
-**_Create a React project that uses the GitHub REST API to show a user’s “pinned” repositories._**
+**_Create a React project that uses the GitHub REST API to show a user’s repositories._**
 
-**You should be able to search a user’s name in an input field and have the pinned repositories update.**
+**You should be able to search a user’s name in an input field and have the repositories update.**
 
 **It should handle and display some sort of “loading” state while fetching data.**
 
@@ -78,4 +78,4 @@ Builds the app in Webpack's production mode to the `dist` directory.
 
 ## License
 
-Pinned Repos Viewer is open source software, built with [React Boilerplate](https://github.com/gunnarjohnson/react-boilerplate), and [licensed as MIT](https://github.com/gunnarjohnson/pinned-repos-viewer/blob/master/LICENSE.txt).
+Repos Viewer is open source software, built with [React Boilerplate](https://github.com/gunnarjohnson/react-boilerplate), and [licensed as MIT](https://github.com/gunnarjohnson/repos-viewer/blob/master/LICENSE.txt).

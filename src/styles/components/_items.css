@@ -60,6 +60,21 @@
       }
     }
 
+    &__icon {
+      width: 1em;
+      margin-right: 0.5em;
+      &--dir {
+        color: $dark;
+      }
+      &--file {
+        padding-right: 5px;
+        color: $medDark;
+        @media screen and (width >= $device-lg) {
+          padding-right: 6px;
+        }
+      }
+    }
+
     &__link {
       text-decoration: none;
       &--dir {
