@@ -1,5 +1,5 @@
 # Repos Viewer
-**A React app that uses the GitHub REST API to display a user's repositories**
+**A React app that uses the GitHub REST API to display a user's repositories.**
 
 ## Table of Contents
 * [Installation](#installation)
@@ -58,7 +58,7 @@ Builds the app in Webpack's production mode to the `dist` directory.
 **It should handle and display some sort of “loading” state while fetching data.**
 > The `Repos` component displays a loading message while the `withGitHubData` HOC fetches the data. 
 
-**It should handle errors if the username doesn’t return anything on GitHub**
+**It should handle errors if the username doesn’t return anything on GitHub.**
 > The `Repos` component displays an error message if the `withGitHubData` HOC is unable to fetch the data. Additionally, the error is written to the console.
 
 **The list of repositories should include details such as the repository’s name, description, and the languages it uses.**
